@@ -306,7 +306,7 @@ The main tasks for this exercise are as follows:
             "description": "Contoso microfleece zip-up jacket",
             "price": "44.99"
         };
-
+        doc.partitionKey = 33218898,
         var accepted = collection.createDocument(collection.getSelfLink(),
             doc,
             function (err, documentCreated) {
@@ -351,7 +351,7 @@ The following result is returned
         if (price == undefined) 
             throw 'no input';
 
-        var amount = parseFloat(price);
+        var amount = price;
 
         if (amount < 1000) 
             return amount * 0.1;
